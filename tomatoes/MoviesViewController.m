@@ -44,6 +44,9 @@
 {
     [super viewDidLoad];
 	
+    // Hide network error label
+    [self.networkErrorLabel setHidden:TRUE];
+    
     // Set up pull to refresh
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
@@ -78,10 +81,6 @@
     
     [cell.posterImage setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder-avatar"]];
     
-    
-    
-
-    
     return cell;
 }
 
@@ -111,29 +110,33 @@
         
         NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
         if (!connectionError && responseCode == 200){
-            // all is good, load the data
+            // all is good, hide network error
+            [self.networkErrorLabel setHidden:TRUE];
+            
+            // load the data
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            
+            //create a movie class, instantiate with dictionary, nsmutable array of movies
+            NSArray *movies = [object objectForKey:@"movies"];
+            
+            self.movies = [[NSMutableArray alloc] init];
+            
+            for (id movieDictionary in movies) {
+                Movie *movie = [[Movie alloc] initWithDictionary:movieDictionary];
+                [self.movies addObject:movie];
+            }
+            
+            NSLog(@"%@", object);
+            [self.tableView reloadData];
         }
         else{
+            // unhide network error label
+            [self.networkErrorLabel setHidden:FALSE];
+            
             //show error message
             NSLog(@"connectionError=%@", connectionError);
             NSLog(@"responseCode=%d", responseCode);
         }
-    
-     
-        NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        //create a movie class, instantiate with dictionary, nsmutable array of movies
-        NSArray *movies = [object objectForKey:@"movies"];
-        
-        self.movies = [[NSMutableArray alloc] init];
-        
-        for (id movieDictionary in movies) {
-            Movie *movie = [[Movie alloc] initWithDictionary:movieDictionary];
-            [self.movies addObject:movie];
-        }
-        
-        NSLog(@"%@", object);
-        [self.tableView reloadData];
         
     }];
 }

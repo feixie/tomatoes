@@ -30,9 +30,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e5i-q6-7OZ">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.61926800270000004" green="0.61926800270000004" blue="0.61926800270000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="125" id="hwM-Li-b3Y" customClass="MovieCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="125"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hwM-Li-b3Y" id="ey3-Y2-vxZ">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="124"/>
@@ -79,6 +86,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="XYf-qk-KhC"/>
+                    <connections>
+                        <outlet property="networkErrorLabel" destination="e5i-q6-7OZ" id="sJi-6J-Qfb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQ1-Ea-Aea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

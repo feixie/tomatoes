@@ -10,4 +10,6 @@
 
 @interface MoviesViewController : UITableViewController
 
+@property (nonatomic, weak) IBOutlet UILabel * networkErrorLabel;
+
 @end
