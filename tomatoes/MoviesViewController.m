@@ -43,7 +43,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    // Set up pull to refresh
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    [refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+    
+    self.refreshControl = refresh;
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,12 +96,30 @@
 
 #pragma mark - Private methods
 
+-(void)refreshView: (UIRefreshControl *)refresh {
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing movie list..."];
+    
+    [self reload];
+    [refresh endRefreshing];
+}
+
 - (void)reload {
     NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=g9au4hv6khv6wzvzgt55gpqs";
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         
+        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+        if (!connectionError && responseCode == 200){
+            // all is good, load the data
+        }
+        else{
+            //show error message
+            NSLog(@"connectionError=%@", connectionError);
+            NSLog(@"responseCode=%d", responseCode);
+        }
+    
+     
         NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
         //create a movie class, instantiate with dictionary, nsmutable array of movies
