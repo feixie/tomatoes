@@ -14,13 +14,16 @@
 		A6E08984188F03B20075863B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E08983188F03B20075863B /* main.m */; };
 		A6E08988188F03B20075863B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E08987188F03B20075863B /* AppDelegate.m */; };
 		A6E0898B188F03B20075863B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E08989188F03B20075863B /* Main.storyboard */; };
-		A6E0898E188F03B20075863B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E0898D188F03B20075863B /* ViewController.m */; };
 		A6E08990188F03B20075863B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E0898F188F03B20075863B /* Images.xcassets */; };
 		A6E08997188F03B20075863B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E08996188F03B20075863B /* XCTest.framework */; };
 		A6E08998188F03B20075863B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E08977188F03B20075863B /* Foundation.framework */; };
 		A6E08999188F03B20075863B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E0897B188F03B20075863B /* UIKit.framework */; };
 		A6E089A1188F03B20075863B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6E0899F188F03B20075863B /* InfoPlist.strings */; };
 		A6E089A3188F03B20075863B /* tomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E089A2188F03B20075863B /* tomatoesTests.m */; };
+		A6E089B4188F07010075863B /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E089B3188F07010075863B /* MoviesViewController.m */; };
+		A6E089B7188F17DD0075863B /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E089B6188F17DD0075863B /* MovieCell.m */; };
+		A6E089BA188F20960075863B /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E089B9188F20960075863B /* Movie.m */; };
+		A6E089BD188F4A6B0075863B /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E089BC188F4A6B0075863B /* MovieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +48,20 @@
 		A6E08986188F03B20075863B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6E08987188F03B20075863B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6E0898A188F03B20075863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A6E0898C188F03B20075863B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A6E0898D188F03B20075863B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A6E0898F188F03B20075863B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A6E08995188F03B20075863B /* tomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E08996188F03B20075863B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A6E0899E188F03B20075863B /* tomatoesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tomatoesTests-Info.plist"; sourceTree = "<group>"; };
 		A6E089A0188F03B20075863B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6E089A2188F03B20075863B /* tomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tomatoesTests.m; sourceTree = "<group>"; };
+		A6E089B2188F07010075863B /* MoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
+		A6E089B3188F07010075863B /* MoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
+		A6E089B5188F17DD0075863B /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		A6E089B6188F17DD0075863B /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		A6E089B8188F20960075863B /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		A6E089B9188F20960075863B /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		A6E089BB188F4A6B0075863B /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		A6E089BC188F4A6B0075863B /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +124,16 @@
 				A6E08986188F03B20075863B /* AppDelegate.h */,
 				A6E08987188F03B20075863B /* AppDelegate.m */,
 				A6E08989188F03B20075863B /* Main.storyboard */,
-				A6E0898C188F03B20075863B /* ViewController.h */,
-				A6E0898D188F03B20075863B /* ViewController.m */,
 				A6E0898F188F03B20075863B /* Images.xcassets */,
 				A6E0897E188F03B20075863B /* Supporting Files */,
+				A6E089B2188F07010075863B /* MoviesViewController.h */,
+				A6E089B3188F07010075863B /* MoviesViewController.m */,
+				A6E089B5188F17DD0075863B /* MovieCell.h */,
+				A6E089B6188F17DD0075863B /* MovieCell.m */,
+				A6E089B8188F20960075863B /* Movie.h */,
+				A6E089B9188F20960075863B /* Movie.m */,
+				A6E089BB188F4A6B0075863B /* MovieViewController.h */,
+				A6E089BC188F4A6B0075863B /* MovieViewController.m */,
 			);
 			path = tomatoes;
 			sourceTree = "<group>";
@@ -249,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E0898E188F03B20075863B /* ViewController.m in Sources */,
+				A6E089B4188F07010075863B /* MoviesViewController.m in Sources */,
+				A6E089BD188F4A6B0075863B /* MovieViewController.m in Sources */,
 				A6E08988188F03B20075863B /* AppDelegate.m in Sources */,
+				A6E089BA188F20960075863B /* Movie.m in Sources */,
+				A6E089B7188F17DD0075863B /* MovieCell.m in Sources */,
 				A6E08984188F03B20075863B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
