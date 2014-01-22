@@ -11,7 +11,7 @@
 
 @interface MovieViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel * movieTitleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * posterImage;
 @property (nonatomic, weak) IBOutlet UILabel * synopsisLabel;
 @property (nonatomic, weak) IBOutlet UILabel * castLabel;
 @property (nonatomic, strong) Movie *movie;

@@ -67,6 +67,7 @@
                                 <connections>
                                     <outlet property="castLabel" destination="1vn-FY-cew" id="zAq-t0-QQv"/>
                                     <outlet property="movieTitleLabel" destination="fbz-89-Zkp" id="jWH-cD-U9g"/>
+                                    <outlet property="posterImage" destination="4MR-iS-OhU" id="cVE-oM-YJn"/>
                                     <outlet property="synopsisLabel" destination="MxD-4X-lPM" id="Al1-yZ-r3u"/>
                                     <segue destination="eOY-Um-Gkn" kind="push" id="HLD-cs-ur5"/>
                                 </connections>
@@ -130,6 +131,7 @@
                     <navigationItem key="navigationItem" id="w47-Z8-wl5"/>
                     <connections>
                         <outlet property="castLabel" destination="SdF-OV-aSp" id="gRK-Vz-8Pe"/>
+                        <outlet property="posterImage" destination="ejO-B6-vjv" id="WjW-g3-0XH"/>
                         <outlet property="synopsisLabel" destination="JGX-lW-2zC" id="t6N-5V-qnO"/>
                     </connections>
                 </viewController>

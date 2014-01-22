@@ -7,6 +7,8 @@
 //
 
 #import "MovieViewController.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface MovieViewController ()
 
@@ -28,6 +30,9 @@
     [super viewDidLoad];
     self.synopsisLabel.text = self.movie.synopsis;
     self.castLabel.text = self.movie.cast;
+    
+    NSString *imageUrl = self.movie.posterUrl;
+    [self.posterImage setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 - (void)didReceiveMemoryWarning

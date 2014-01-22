@@ -10,6 +10,7 @@
 #import "MovieViewController.h"
 #import "MovieCell.h"
 #import "Movie.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MoviesViewController ()
 
@@ -55,7 +56,6 @@
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSLog(@"%lu", (unsigned long)self.movies.count);
     return self.movies.count;
 }
 
@@ -63,12 +63,16 @@
     MovieCell *cell = (MovieCell *)[tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
     Movie *movie = [self.movies objectAtIndex:indexPath.row];
-    NSLog(@"in table view");
 
-    NSLog(@"%@", movie.title);
     cell.movieTitleLabel.text = movie.title;
     cell.synopsisLabel.text = movie.synopsis;
     cell.castLabel.text = movie.cast;
+    
+    NSString *imageUrl = movie.posterUrl;
+    
+    [cell.posterImage setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    
     
 
     
@@ -105,8 +109,6 @@
         }
         
         NSLog(@"%@", object);
-
-        //NSLog(@"movies: %@", self.movies);
         [self.tableView reloadData];
         
     }];

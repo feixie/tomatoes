@@ -16,6 +16,9 @@
         self.title = dictionary[@"title"];
         self.synopsis = dictionary[@"synopsis"];
         self.cast = [self cast:dictionary[@"abridged_cast"]];
+        
+        NSDictionary *posterDictionary = dictionary[@"posters" ];
+        self.posterUrl = [posterDictionary objectForKey:@"original"];
     }
     
     return self;
