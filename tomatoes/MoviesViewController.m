@@ -70,7 +70,7 @@
     
     NSString *imageUrl = movie.posterUrl;
     
-    [cell.posterImage setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [cell.posterImage setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder-avatar"]];
     
     
     
